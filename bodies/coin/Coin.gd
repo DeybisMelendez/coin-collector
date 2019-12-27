@@ -7,5 +7,6 @@ func body_entered(body):
 	if not touched:
 		if body.is_in_group("ball"):
 			touched = true
-			body.add_score()
+			if get_tree().current_scene.has_method("add_score"):
+				get_tree().current_scene.add_score()
 			queue_free()

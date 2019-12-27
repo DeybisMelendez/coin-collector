@@ -4,6 +4,13 @@ const FORCE = 400
 
 var state = "waiting"
 
+func _physics_process(delta):
+	if state == "moving":
+		var bodies = get_colliding_bodies()
+		if bodies.size() > 0:
+			if bodies[0].is_in_group("brick"):
+				bodies[0].get_parent().collided()
+
 func set_state(new_state):
 	state = new_state
 	match state:

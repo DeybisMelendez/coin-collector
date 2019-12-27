@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://bodies/bricks/diamond_grey.png" type="Texture" id=1]
+[ext_resource path="res://bodies/bricks/Brick.gd" type="Script" id=2]
+
+[node name="Sprite" type="Sprite"]
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="Body" type="RigidBody2D" parent="." groups=[
+"brick",
+]]
+mode = 1
+contacts_reported = 1
+contact_monitor = true
