@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/paddleBlu.png-4dda2af59d127ac0785297e4aff01e6b.stex"
+path="res://.import/paddleBlu.png-2c47c76607417a46c045f9dcf5ca3b13.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://puzzle/paddleBlu.png"
-dest_files=[ "res://.import/paddleBlu.png-4dda2af59d127ac0785297e4aff01e6b.stex" ]
+source_file="res://bodies/paddle/paddleBlu.png"
+dest_files=[ "res://.import/paddleBlu.png-2c47c76607417a46c045f9dcf5ca3b13.stex" ]
 
 [params]
 
