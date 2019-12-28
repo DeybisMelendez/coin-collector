@@ -16,7 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Coin Collector"
+run/main_scene="res://scenes/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://autoload/Global.gd"
+Sounds="*res://autoload/Sounds.tscn"
 
 [rendering]
 

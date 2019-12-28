@@ -1,13 +1,16 @@
 extends RigidBody2D
 
-const FORCE = 400
+const FORCE = 800
 
 var state = "waiting"
 
-func _physics_process(delta):
+onready var spawn = global_position
+
+func _physics_process(_delta):
 	if state == "moving":
 		var bodies = get_colliding_bodies()
 		if bodies.size() > 0:
+			Sounds.Hit()
 			if bodies[0].is_in_group("brick"):
 				bodies[0].get_parent().collided()
 
@@ -16,8 +19,10 @@ func set_state(new_state):
 	match state:
 		"waiting":
 			mode = MODE_STATIC
+			$CPUParticles2D.emitting = false
 		"moving":
 			mode = MODE_RIGID
+			$CPUParticles2D.emitting = true
 
 func shoot(direction):
 	set_state("moving")
@@ -31,3 +36,7 @@ func _input(event):
 					var mouse_pos = get_global_mouse_position()
 					var direction = (mouse_pos - global_position).normalized()
 					shoot(direction)
+
+func reset():
+	set_state("waiting")
+	global_position = spawn
