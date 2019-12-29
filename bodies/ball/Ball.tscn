@@ -6,8 +6,7 @@
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
-rough = true
-bounce = 100.0
+bounce = 1000.0
 
 [sub_resource type="CircleShape2D" id=2]
 
@@ -20,6 +19,7 @@ _data = [ Vector2( 0.5, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 mode = 1
 mass = 2.0
 physics_material_override = SubResource( 1 )
+gravity_scale = 6.0
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 1 )

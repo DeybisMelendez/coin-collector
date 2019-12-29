@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-const FORCE = 800
+const FORCE = 1000
 
 var state = "waiting"
 
@@ -23,6 +23,9 @@ func set_state(new_state):
 		"moving":
 			mode = MODE_RIGID
 			$CPUParticles2D.emitting = true
+		"stop":
+			mode = MODE_STATIC
+			$CPUParticles2D.emitting = false
 
 func shoot(direction):
 	set_state("moving")
