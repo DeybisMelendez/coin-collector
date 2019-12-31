@@ -7,6 +7,8 @@ export var next_level_path = ""
 onready var Ball = $Ball
 onready var HUD = $HUD
 
+var score = 0
+
 func _ready():
 	HUD.set_balls(ball_count)
 	HUD.set_score(Global.score)
@@ -18,17 +20,31 @@ func ball_exited():
 	var coins = get_tree().get_nodes_in_group("coin").size()
 	if coins <= 0:
 		next_level()
-		Ball.set_state("stop")
+	elif ball_count <= 0:
+		HUD.you_lose_anim()
 	else:
 		ball_count -= 1
 		HUD.set_balls(ball_count)
 		Ball.reset()
+#	if ball_count <= 0:
+#		HUD.you_lose_anim()
+#		#Ball.set_state("stop")
+#	else:
+#		var coins = get_tree().get_nodes_in_group("coin").size()
+#		if coins <= 0:
+#			next_level()
+#			#Ball.set_state("stop")
+#		else:
+#			ball_count -= 1
+#			HUD.set_balls(ball_count)
+#			Ball.reset()
 
 func add_score(points):
-	Global.score += points
-	HUD.set_score(Global.score)
+	score += points
+	HUD.set_score(Global.score + score)
 
 func next_level():
-	$HUD.get_node("AnimationPlayer").play("youwin")
+	Global.score += score
+	$HUD.you_win_anim()
 	yield($HUD.get_node("AnimationPlayer"),"animation_finished")
 	get_tree().change_scene(next_level_path)

@@ -17,6 +17,7 @@
 script = ExtResource( 1 )
 ball_count = 6
 level = 1
+next_level_path = "res://scenes/levels/2.tscn"
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )

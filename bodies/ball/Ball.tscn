@@ -41,3 +41,5 @@ color = Color( 0.223529, 0.780392, 1, 1 )
 texture = ExtResource( 3 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="Tween" type="Tween" parent="."]

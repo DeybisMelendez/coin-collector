@@ -1,0 +1,395 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/levels/Level.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/backgroundColorGrass.png" type="Texture" id=2]
+[ext_resource path="res://bodies/walls/Walls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://bodies/bricks/Brick.tscn" type="PackedScene" id=4]
+[ext_resource path="res://bodies/bricks/rectangle_red.png" type="Texture" id=5]
+[ext_resource path="res://bodies/coin/Coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://bodies/ball/Ball.tscn" type="PackedScene" id=7]
+[ext_resource path="res://bodies/paddle/Paddle.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=9]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+level = 2
+next_level_path = "res://scenes/levels/3.tscn"
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, -200 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 3 )]
+
+[node name="Bricks" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Rectangle" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 0, 112 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle2" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 64, 112 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle3" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 128, 144 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle4" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 192, 144 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle5" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 256, 176 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle6" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 320, 176 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle7" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 384, 208 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle8" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 448, 208 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle9" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 512, 240 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle10" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 576, 240 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle11" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 640, 272 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle12" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 704, 272 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle13" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 768, 304 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle14" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 832, 304 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle15" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 896, 336 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Rectangle16" parent="Bricks" instance=ExtResource( 4 )]
+position = Vector2( 960, 336 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 2
+
+[node name="Bricks2" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Rectangle" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 0, 208 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle2" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 64, 208 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle3" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 128, 240 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle4" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 192, 240 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle5" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 256, 272 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle6" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 320, 272 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle7" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 384, 304 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle8" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 448, 304 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle9" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 512, 336 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle10" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 576, 336 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle11" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 640, 368 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle12" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 704, 368 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle13" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 768, 400 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle14" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 832, 400 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle15" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 896, 432 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Rectangle16" parent="Bricks2" instance=ExtResource( 4 )]
+position = Vector2( 960, 432 )
+texture = ExtResource( 5 )
+type = "rectangle"
+level = 1
+
+[node name="Bricks3" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Rectangle" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 0, 304 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle2" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 64, 304 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle3" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 128, 336 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle4" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 192, 336 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle5" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 256, 368 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle6" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 320, 368 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle7" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 384, 400 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle8" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 448, 400 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle9" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 512, 432 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle10" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 576, 432 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle11" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 640, 464 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle12" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 704, 464 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle13" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 768, 496 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle14" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 832, 496 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle15" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 896, 528 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Rectangle16" parent="Bricks3" instance=ExtResource( 4 )]
+position = Vector2( 960, 528 )
+texture = ExtResource( 5 )
+type = "rectangle"
+
+[node name="Coins" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Coin" parent="Coins" instance=ExtResource( 6 )]
+position = Vector2( 64, 176 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 6 )]
+position = Vector2( 192, 208 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 6 )]
+position = Vector2( 320, 240 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 6 )]
+position = Vector2( 448, 272 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 6 )]
+position = Vector2( 576, 304 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 6 )]
+position = Vector2( 704, 336 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 6 )]
+position = Vector2( 832, 368 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 6 )]
+position = Vector2( 960, 400 )
+
+[node name="Coins2" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Coin" parent="Coins2" instance=ExtResource( 6 )]
+position = Vector2( 64, 272 )
+
+[node name="Coin2" parent="Coins2" instance=ExtResource( 6 )]
+position = Vector2( 192, 304 )
+
+[node name="Coin3" parent="Coins2" instance=ExtResource( 6 )]
+position = Vector2( 320, 336 )
+
+[node name="Coin4" parent="Coins2" instance=ExtResource( 6 )]
+position = Vector2( 448, 368 )
+
+[node name="Coin5" parent="Coins2" instance=ExtResource( 6 )]
+position = Vector2( 576, 400 )
+
+[node name="Coin6" parent="Coins2" instance=ExtResource( 6 )]
+position = Vector2( 704, 432 )
+
+[node name="Coin7" parent="Coins2" instance=ExtResource( 6 )]
+position = Vector2( 832, 464 )
+
+[node name="Coin8" parent="Coins2" instance=ExtResource( 6 )]
+position = Vector2( 960, 496 )
+
+[node name="Coins3" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Coin" parent="Coins3" instance=ExtResource( 6 )]
+position = Vector2( 64, 80 )
+
+[node name="Coin2" parent="Coins3" instance=ExtResource( 6 )]
+position = Vector2( 192, 112 )
+
+[node name="Coin3" parent="Coins3" instance=ExtResource( 6 )]
+position = Vector2( 320, 144 )
+
+[node name="Coin4" parent="Coins3" instance=ExtResource( 6 )]
+position = Vector2( 448, 176 )
+
+[node name="Coin5" parent="Coins3" instance=ExtResource( 6 )]
+position = Vector2( 576, 208 )
+
+[node name="Coin6" parent="Coins3" instance=ExtResource( 6 )]
+position = Vector2( 704, 240 )
+
+[node name="Coin7" parent="Coins3" instance=ExtResource( 6 )]
+position = Vector2( 832, 272 )
+
+[node name="Coin8" parent="Coins3" instance=ExtResource( 6 )]
+position = Vector2( 960, 304 )
+
+[node name="Ball" parent="." instance=ExtResource( 7 )]
+position = Vector2( 512, 64 )
+
+[node name="Paddle" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0, 560 )
+
+[node name="HUD" parent="." instance=ExtResource( 9 )]
+margin_right = 1024.0
+margin_bottom = 600.0

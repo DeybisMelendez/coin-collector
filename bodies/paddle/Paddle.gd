@@ -27,3 +27,13 @@ func move_to(target):
 			Tween.EASE_IN_OUT,
 			0)
 	$Tween.start()
+
+#func _physics_process(delta):
+#	if Input.is_action_pressed("ui_left"):
+#		global_position.x -= 100 * delta
+#	elif Input.is_action_pressed("ui_right"):
+#		global_position.x += 100 * delta
+#	if global_position.x > end:
+#		global_position.x == end
+#	elif global_position.x < begin:
+#		global_position.x == begin
