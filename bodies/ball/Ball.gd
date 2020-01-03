@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-const FORCE = 1000
+const FORCE = 500
 
 var state = "waiting"
 
@@ -12,7 +12,7 @@ func _physics_process(_delta):
 		if bodies.size() > 0:
 			Sounds.Hit()
 			var velocity = get_linear_velocity().normalized()
-			set_linear_velocity(velocity*FORCE/2)
+			set_linear_velocity(velocity*FORCE)
 			if bodies[0].is_in_group("brick"):
 				bodies[0].get_parent().collided()
 			elif bodies[0].is_in_group("paddle"):
